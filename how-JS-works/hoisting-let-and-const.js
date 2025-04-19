@@ -16,10 +16,6 @@ var y = 10;
 
 
 // Testing stuff
-console.log(num);
-var num = printValue(10);
-console.log(num);
-
-function printValue(value) {
-    return value;
-}
+// console.log(num);
+// var num = printValue(10);
+// console.log(num);
