@@ -1,0 +1,1 @@
+This repo contains all my notes related to GFG Full Stack Course - JS
