@@ -23,7 +23,7 @@ const user = {
 // if not return undefined, else check if property city exists inside address
 // if not undefined else return the property value.
 
-console.log(user.address?.city ?? "Details of city not provided");
+console.log(user["address"]?.city ?? "Details of city not provided");
 
 // user.getDisplayMessage();
 // console.log(user.getDisplayAddress?.());
