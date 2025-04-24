@@ -70,5 +70,5 @@ const employees = {
 // let {youtube: {em4: {name, occupation}}} = employees;
 // console.log(name, occupation);
 
-let {placement: {em3: {achi: {first, second, third}}}} = employees;
+let {["placement"]: {["em3"]: {["achi"]: {first, second, third}}}} = employees;
 console.log(first, second, third);
