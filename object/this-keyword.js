@@ -64,6 +64,7 @@ const user5 = {
   name: "Indu",
   showName: function () {
     console.log("here -", this.name);
+    // This is the solution when this nested func needs to use user5
     const object = this;
     function showMessage() {
       console.log(object.name);
