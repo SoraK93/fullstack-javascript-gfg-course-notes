@@ -50,6 +50,6 @@ function sayHi(degree, year) {
 
 // user4.sayHi.call(user3);
 
-// Bind works similar to above, but in this we need to declare the func to a var and call it using that var.
+// Bind works a bit different, it will not return the desired value on call, but it returns a func which can be decalred to a var and called later.
 const result = sayHi.bind(user1, "B.Com");
 result(2005);
