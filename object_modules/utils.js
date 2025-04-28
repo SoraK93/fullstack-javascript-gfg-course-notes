@@ -6,20 +6,21 @@
 //   console.log(value);
 // }
 
-// Method - 1;
+// CommonJS Export
 // module.exports = {
 //   greet,
 //   print,
 // };
 
-// Method - 2;
+// Method - 1;
+// Default Export
 // export default {
 //   greet,
 //   print,
 // };
 
-// Method - 3;
-// named export
+// Method - 2;
+// Named Export
 export function greet(userName) {
   return `Good Morning ${userName}`;
 }

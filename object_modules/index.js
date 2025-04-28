@@ -1,21 +1,22 @@
-// Method - 1
 // const allTheModule = require("./utils.js");
 
-// Method - 2
+// Method - 1
 // import allTheModules from "./utils.js";
 
 // console.log(allTheModule);
 // const {greet, print} = allTheModules;
 
-// Method - 3
+// Method - 2
 import { greet, print } from "./utils.js";
 
+// Method - 3
 // Dynamic Import
 const isMathRequired = true;
-if (isMathRequired){
-    const {add} = await import("./math.js");
+if (isMathRequired) {
+  // await makes the code wait for the module to load before using it
+  const { add } = await import("./math.js");
 
-    console.log(add(2, 2));
+  console.log(add(2, 2));
 }
 
 print(greet("Sourabh"));
