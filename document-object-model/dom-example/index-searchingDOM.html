@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Change color on button click</title>
+    <style>
+      #paragraph {
+        border: 1px solid black;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body style="text-align: center">
+    <h1 id="geeks">GeeksforGeeks</h1>
+    <h2>DOM getElementByID() method</h2>
+    <h2 id="greeting">Hello Geeks!</h2>
+    <div id="paragraph">
+      <p>This is paragraph 1.</p>
+      <p>This is paragraph 2.</p>
+    </div>
+    <input type="button" onclick="greenColor()" value="Click to change" />
+    <script>
+      function greenColor() {
+        const geeks = document.getElementById("geeks");
+        geeks.style.color = "green";
+        const greet = document.getElementById("greeting");
+        greet.innerHTML = "Welcome to GeeksforGeeks!";
+        const paragraph = document
+          .getElementById("paragraph")
+          .querySelectorAll("p");
+        for (let i = 0, n = paragraph.length; i < n; i++) {
+          paragraph[i].style.backgroundColor = "green";
+          paragraph[i].style.color = "white";
+        }
+      }
+    </script>
+  </body>
+</html>

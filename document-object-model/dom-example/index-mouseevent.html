@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capture Mouse Events</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+        }
+        #clickit{
+            align-self: flex-start;
+            margin: 5px;
+        }
+        #hoverPara{
+            display: inline-block;
+            margin: 5px;
+        }
+    </style>
+  </head>
+  <body>
+    <button id="clickit">Click here</button>
+    <p id="hoverPara">Hover over this Text</p>
+    <b id="effect"></b>
+    <script>
+      const button = document.getElementById("clickit");
+      const para = document.getElementById("hoverPara");
+
+      button.addEventListener("click", () => {
+        document.getElementById("effect").innerHTML +=
+          "Click Event Triggered<br>";
+      });
+
+      para.addEventListener("mouseover", () => {
+        document.getElementById("effect").innerHTML += "MouseOver Event<br>";
+      });
+
+      para.addEventListener("mouseout", () => {
+        document.getElementById("effect").innerHTML += "MouseOut Event<br>";
+      });
+    </script>
+  </body>
+</html>
