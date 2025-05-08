@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+#parent-container{
+    display: flex;
+    gap: 1rem;
+}
+
+.card-container{
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-shadow: 4px 4px 8px darkgray;
+    align-items: center;
+}
+
+.card-container > span {
+    font-size: 15px;
+    margin: 10px;
+}
+
+.card-container > img{
+    margin: 10px;
+    width: 400px;
+    height: auto;
+    box-shadow: 2px 2px 3px darkgrey;
+}

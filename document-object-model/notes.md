@@ -46,4 +46,5 @@ element.addEventListener(event, listener, useCapture);
 - **useCapture**: Controls event propagation, where "true" denotes capturing-phase and "false" denotes bubbling-phase.
 
 ## Event Delegation
-
+Event delegation is a technique where you add a single event listener to a parent element taking advantage of event bubbling by placing the event listener on a common ancestor, you can capture events from all its children.  
+The event.target property is used to identify the specific child element that was clicked.
