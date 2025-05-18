@@ -137,3 +137,10 @@ console.log(olderChildren);
   Children { name: 'Ashish', age: 19, id: 2 }
 ]
 ```
+
+# Private Properties
+It controls access to certain properties within a class maintaining integrity, security and ensuring that these data remain protected and are only modified in a controlled manner.  
+These are variables that are not meant to be accessed outside the class in which they are defined. This enforces **Encapsulation - A core principle in OOP**, thus reducing the risk of unintended side effects from direct manipulation.
+
+> Key Features: Private Fields Syntax(#), Encapsulation, Controlled Access.
+
