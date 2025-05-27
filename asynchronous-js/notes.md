@@ -47,3 +47,28 @@ We call an API and depending upon the response we are calling another API and de
 2. **Inversion of Control**: The actual control of the callback function is given to the function it is passed as an argument and if that function is not called upon i.e. it remains in a ideal state our callback function will never be executed.
 > ![NOTE]  
 > In order to resolve these issues we use promises and the async-await style of async programming.
+
+# Promises in JavaScript
+Promises are commonly used to handle various asynchronous tasks such as fetching data from an API, reading files, or waiting for a timer to expire.  
+A promise is initially in a pending state (unidentified value) and shifts to 'fulfilled' (resolved value) or 'rejected' (error value) state depending on whther the promise was resolved or rejected.
+```
+let promise1 = fetch('https://randombig.cat/roar.json');
+promise1.then(function(response){
+  return response.json();
+}).then(function(commits){
+ alert(commits[0].author.login)
+}).catch(function(error){
+ alert("Some Error in fetching response")
+});
+```
+Here, .then() method gets executed once the promise is successfully resolved.
+And, .catch() method gets executed when the promise is rejected.
+
+# Creating a Promise and Method Chaining
+**Promise Constructor Syntax**
+```
+let promise = new Promise(function (resolve, reject) {
+    // executor;
+})
+```
+When a new Promise is created, the executor is executed automatically. The callbacks, resolbve, and reject, are provided by JavaScript itself, regardless the executor must call either the resolve (value) callback or reject (error) callbacks, indicating successful or error object.
