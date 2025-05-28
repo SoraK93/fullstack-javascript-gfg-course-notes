@@ -72,3 +72,34 @@ let promise = new Promise(function (resolve, reject) {
 })
 ```
 When a new Promise is created, the executor is executed automatically. The callbacks, resolbve, and reject, are provided by JavaScript itself, regardless the executor must call either the resolve (value) callback or reject (error) callbacks, indicating successful or error object.
+
+# Promise API's
+A promise is an object that denotes a value that might not be accessible immediately but will be resolved eventually.
+> It facilitate the handling of asynchronous code.
+
+**Promise.all()**  
+Used in the scenario where we have to execute multiple promises in parallel and wait until all of them are ready. Promise.all() rejects as a whole if any promise rejects.
+```
+let promise = Promise.all();
+```
+
+**Promise.allSettled()**  
+Promise.allSettled() just waits for all promises to settle, regardless of the result. Here if a promise is rejected the overall result of the promise is not rejected but it gives the successful response for 'fulfilled' and error for 'rejected', this is different from Promise.all().  
+The resulting array will :-  
+[{status: "fulfilled", value: result}, // successful response  
+{status: "rejected",reason: error}] // for errors  
+```  
+let promise = Promise.allSettled();
+```
+
+**Promise.race()**  
+Here instead of waiting for all the responses like promise.all(), it only waits for the first one to settle and retrieves its result or error. Apart from the very first response everything else is disregarded.
+```
+let promise = Promise.race();
+```
+
+**Promise.any()**  
+This method will return the first promise that finishes successfully (i.e., it gets resolved) and disregardes any additional outcomes. However, if none of the promises get resolved and they all reject, then Promise.any() will throw an error.
+```
+let promise = Promise.any();
+```
