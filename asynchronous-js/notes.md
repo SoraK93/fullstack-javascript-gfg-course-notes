@@ -3,7 +3,7 @@ A function that is passed as an argument to another function and is invoked or c
 The main purpose of a callback function is to allow asynchronous processing or non-blocking behavior.  
 Commonly used in event handling, such as when responding to use actions or performing operations that require significant time to complete.
 
-> ![NOTE]  
+> [!NOTE]  
 > These types of function that can take other functions as argument are called higher-order functions.  
 > Async programming is not possible without the concept of Callback Functions.
 
@@ -45,7 +45,7 @@ We call an API and depending upon the response we are calling another API and de
 **So this creates two problems**: -  
 1. **Pyramid of Doom**: Our code is expanding in the horizontal direction instead of the vertical direction, this is considered bad practice and should be avoided. It makes the code difficult to read and debug.
 2. **Inversion of Control**: The actual control of the callback function is given to the function it is passed as an argument and if that function is not called upon i.e. it remains in a ideal state our callback function will never be executed.
-> ![NOTE]  
+> [!NOTE]  
 > In order to resolve these issues we use promises and the async-await style of async programming.
 
 # Promises in JavaScript
